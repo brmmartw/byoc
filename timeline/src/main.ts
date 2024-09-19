@@ -180,7 +180,7 @@ const init = async () => {
             );
         },
         visualPropEditorDefinition: {
-            // Define any additional visual properties if needed
+            // Define any additional visual properties
         },
         validateConfig: (
             updatedConfig: ChartConfig[],
