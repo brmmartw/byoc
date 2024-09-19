@@ -6,7 +6,7 @@ import {
     ChartToTSEvent,
     ColumnType,
     Query,
-} from '@thoughtspot/ts-chart-sdk';
+} from '@thoughtspot/ts-chart-sdk'; // Review
 import Highcharts from 'highcharts';
 import timeline from 'highcharts/modules/timeline';
 import _ from 'lodash';
@@ -58,9 +58,9 @@ const getTimelineDataModel = (chartModel: ChartModel) => {
     // Build the series data for the timeline chart
     const seriesData = _.map(groupedData, (events, category) => {
         return _.map(events, event => ({
-            x: Date.parse(event[getColumnIdListByKey(chartConfig, 'datetime')[0]]), // Convert your datetime to timestamp
+            x: Date.parse(event[getColumnIdListByKey(chartConfig, 'datetime')[0]]), // Convert datetime to timestamp
             name: category, // Use category as the name
-            label: event[getColumnIdListByKey(chartConfig, 'label')[0]] || '', // Replace with your event description
+            label: event[getColumnIdListByKey(chartConfig, 'label')[0]] || '', // Event description
         }));
     }).flat();
 
