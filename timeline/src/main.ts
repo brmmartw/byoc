@@ -11,6 +11,7 @@ import Highcharts from 'highcharts';
 import timeline from 'highcharts/modules/timeline';
 import _ from 'lodash';
 
+
 // Initialize the timeline module for Highcharts
 timeline(Highcharts);
 
